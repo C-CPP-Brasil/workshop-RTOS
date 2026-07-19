@@ -4,6 +4,7 @@ Materiais para apresentação, estudo e desenvolvimento prático com RTOS
 (especificamente FreeRTOS), para entender como usar este sistema operacional
 e construir soluções de baixo nível em sistemas embarcados.
 
+```markdown
 ## Site do workshop (GitHub Pages)
 
 O site está em [`docs/`](docs/). É um template HTML/CSS estático — o visual é um
@@ -22,15 +23,8 @@ O site está em [`docs/`](docs/). É um template HTML/CSS estático — o visual
 1. **Settings → Pages** no GitHub
 2. Source: branch `main`, pasta `/docs`
 3. Site em `https://<user-ou-org>.github.io/<repo>/`
-
-### Pré-visualizar
-
-```bash
-cd docs
-python3 -m http.server 8080
 ```
-
-Abra http://localhost:8080
+### O texto acima foi gerado inicialmente para documentar como usar o github pages e deve ser removido
 
 ## Licença
 
