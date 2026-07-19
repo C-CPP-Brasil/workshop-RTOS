@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snippet · xTaskCreate — Workshop FreeRTOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">FreeRTOS Workshop</span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="../index.html">Início</a>
+        <a href="../modulos/01-introducao.html">Módulos</a>
+        <a href="index.html" aria-current="page">Exemplos</a>
+        <a href="../guia/como-usar.html">Como usar</a>
+      </nav>
+    </header>
+
+    <main>
+      <header class="page-header">
+        <p class="eyebrow">Exemplo</p>
+        <h1 class="page-title">Criar uma task</h1>
+        <p class="meta">Padrão para páginas de código curto + explicação</p>
+      </header>
+
+      <article class="content">
+        <p>
+          Assinatura típica de <code>xTaskCreate</code>. Os parâmetros exatos dependem
+          do port e de <code>FreeRTOSConfig.h</code>.
+        </p>
+
+        <div class="pre-wrap">
+          <pre><code>BaseType_t xTaskCreate(
+    TaskFunction_t pvTaskCode,
+    <span class="kw">const</span> <span class="kw">char</span> * <span class="kw">const</span> pcName,
+    configSTACK_DEPTH_TYPE usStackDepth,
+    <span class="kw">void</span> *pvParameters,
+    UBaseType_t uxPriority,
+    TaskHandle_t *pxCreatedTask
+);</code></pre>
+        </div>
+
+        <h2>Notas para o instrutor</h2>
+        <ul>
+          <li>Mostre o retorno <code>pdPASS</code> / <code>errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY</code>.</li>
+          <li>Compare stack depth em words vs bytes no port usado no lab.</li>
+          <li>Ligue este exemplo ao módulo <a href="../modulos/02-tarefas.html">02 · Tarefas</a>.</li>
+        </ul>
+      </article>
+
+      <nav class="pager" aria-label="Navegação">
+        <a href="index.html">
+          <span class="dir">Voltar</span>
+          ← Componentes
+        </a>
+        <a href="../guia/como-usar.html">
+          <span class="dir">Próximo</span>
+          Como usar o template →
+        </a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Comunidade de C e C++ Brasil</p>
+    </footer>
+  </div>
+</body>
+</html>

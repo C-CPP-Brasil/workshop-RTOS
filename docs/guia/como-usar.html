@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Como usar este template — Workshop FreeRTOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">FreeRTOS Workshop</span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="../index.html">Início</a>
+        <a href="../modulos/01-introducao.html">Módulos</a>
+        <a href="../exemplos/index.html">Exemplos</a>
+        <a href="como-usar.html" aria-current="page">Como usar</a>
+      </nav>
+    </header>
+
+    <main>
+      <header class="page-header">
+        <p class="eyebrow">Guia</p>
+        <h1 class="page-title">Como usar este template</h1>
+        <p class="meta">Estrutura, GitHub Pages e customização do design sample</p>
+      </header>
+
+      <nav class="toc" aria-label="Nesta página">
+        <h2>Nesta página</h2>
+        <ol>
+          <li><a href="#estrutura">Estrutura de pastas</a></li>
+          <li><a href="#nova-pagina">Adicionar uma página</a></li>
+          <li><a href="#design">Trocar o design</a></li>
+          <li><a href="#pages">Publicar no GitHub Pages</a></li>
+          <li><a href="#local">Pré-visualizar localmente</a></li>
+        </ol>
+      </nav>
+
+      <article class="content">
+        <h2 id="estrutura">Estrutura de pastas</h2>
+        <div class="pre-wrap">
+          <pre><code>docs/
+├── index.html              <span class="comment"># landing</span>
+├── assets/css/main.css     <span class="comment"># design sample (tokens no :root)</span>
+├── modulos/                <span class="comment"># aulas / capítulos</span>
+├── exemplos/               <span class="comment"># demos de componentes e snippets</span>
+└── guia/                   <span class="comment"># esta documentação do template</span></code></pre>
+        </div>
+
+        <h2 id="nova-pagina">Adicionar uma página</h2>
+        <ol>
+          <li>Copie <code>modulos/01-introducao.html</code> (ou um exemplo em <code>exemplos/</code>).</li>
+          <li>Ajuste o <code>&lt;title&gt;</code>, eyebrow, <code>h1</code> e o corpo em <code>.content</code>.</li>
+          <li>Corrija os caminhos relativos do CSS e do menu (<code>../assets/...</code> vs <code>assets/...</code>).</li>
+          <li>Inclua o link no menu do header e, se fizer sentido, na agenda do <code>index.html</code>.</li>
+          <li>Atualize o <code>.pager</code> anterior/próximo entre módulos vizinhos.</li>
+        </ol>
+
+        <div class="callout">
+          <p class="callout-title">Convenção sugerida</p>
+          <p>
+            Prefixe módulos com número: <code>03-filas.html</code>,
+            <code>04-sincronizacao.html</code>. Assim a ordem fica óbvia no repositório.
+          </p>
+        </div>
+
+        <h2 id="design">Trocar o design</h2>
+        <p>
+          O visual atual é um <strong>sample</strong>. Para redesenhar sem reescrever o HTML,
+          edite só as variáveis CSS em <code>docs/assets/css/main.css</code>:
+        </p>
+        <div class="pre-wrap">
+          <pre><code>:root {
+  --bg: #0b1210;
+  --accent: #3dd68c;
+  --font-display: "Syne", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  <span class="comment">/* ... */</span>
+}</code></pre>
+        </div>
+        <p>
+          Classes estáveis para reutilizar: <code>.hero</code>, <code>.callout</code>,
+          <code>.pre-wrap</code>, <code>.btn</code>, <code>.pager</code>, <code>.toc</code>.
+          Veja demos em <a href="../exemplos/index.html">Exemplos</a>.
+        </p>
+
+        <h2 id="pages">Publicar no GitHub Pages</h2>
+        <ol>
+          <li>No repositório: <strong>Settings → Pages</strong>.</li>
+          <li>Source: <strong>Deploy from a branch</strong>.</li>
+          <li>Branch: <code>main</code> (ou a branch padrão), pasta <code>/docs</code>.</li>
+          <li>Salve. O site fica em <code>https://&lt;org-ou-user&gt;.github.io/&lt;repo&gt;/</code>.</li>
+        </ol>
+        <div class="callout warn">
+          <p class="callout-title">Base path</p>
+          <p>
+            Links neste template são relativos (<code>modulos/...</code>, <code>../assets/...</code>),
+            então funcionam tanto na raiz do Pages quanto em preview local via arquivo ou servidor estático.
+          </p>
+        </div>
+
+        <h2 id="local">Pré-visualizar localmente</h2>
+        <p>Qualquer servidor estático na pasta <code>docs/</code>:</p>
+        <div class="pre-wrap">
+          <pre><code>cd docs
+python3 -m http.server 8080
+<span class="comment"># abra http://localhost:8080</span></code></pre>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Comunidade de C e C++ Brasil</p>
+      <p class="footer-note">Mantenha este guia atualizado se a estrutura do template mudar.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>01 · Introdução — Workshop FreeRTOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">FreeRTOS Workshop</span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="../index.html">Início</a>
+        <a href="01-introducao.html" aria-current="page">Módulos</a>
+        <a href="../exemplos/index.html">Exemplos</a>
+        <a href="../guia/como-usar.html">Como usar</a>
+      </nav>
+    </header>
+
+    <main>
+      <header class="page-header">
+        <p class="eyebrow">Módulo 01</p>
+        <h1 class="page-title">O que é um RTOS</h1>
+        <p class="meta">Exemplo de página de conteúdo · ~15 min</p>
+      </header>
+
+      <article class="content">
+        <div class="callout">
+          <p class="callout-title">Objetivo</p>
+          <p>Entender por que um sistema operacional de tempo real existe e o que o FreeRTOS oferece em um MCU.</p>
+        </div>
+
+        <h2>Contexto</h2>
+        <p>
+          Em firmware “bare metal”, o loop principal e as interrupções compartilham o processador
+          sem abstração de concorrência. Um <strong>RTOS</strong> adiciona tarefas, prioridade e
+          primitivas de sincronização para cumprir deadlines previsíveis.
+        </p>
+
+        <h2>Ideias-chave</h2>
+        <ul>
+          <li>Determinismo e latência de resposta importam mais que throughput médio.</li>
+          <li>O scheduler decide qual task roda com base em prioridade (e política).</li>
+          <li>FreeRTOS é leve, portável e amplamente usado em embarcados.</li>
+        </ul>
+
+        <h2>Checklist rápido</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Conceito</th>
+                <th>No FreeRTOS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Thread / task</td>
+                <td><code>xTaskCreate</code></td>
+              </tr>
+              <tr>
+                <td>Fila</td>
+                <td><code>xQueueCreate</code></td>
+              </tr>
+              <tr>
+                <td>Mutex / semáforo</td>
+                <td><code>xSemaphoreCreate…</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout warn">
+          <p class="callout-title">Atenção</p>
+          <p>Este texto é placeholder do template. Substitua pelo material real do workshop.</p>
+        </div>
+      </article>
+
+      <nav class="pager" aria-label="Navegação entre módulos">
+        <span></span>
+        <a href="02-tarefas.html">
+          <span class="dir">Próximo</span>
+          Tarefas e o scheduler →
+        </a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Comunidade de C e C++ Brasil</p>
+    </footer>
+  </div>
+</body>
+</html>

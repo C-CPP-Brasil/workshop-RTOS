@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>02 · Tarefas — Workshop FreeRTOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">FreeRTOS Workshop</span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="../index.html">Início</a>
+        <a href="01-introducao.html" aria-current="page">Módulos</a>
+        <a href="../exemplos/index.html">Exemplos</a>
+        <a href="../guia/como-usar.html">Como usar</a>
+      </nav>
+    </header>
+
+    <main>
+      <header class="page-header">
+        <p class="eyebrow">Módulo 02</p>
+        <h1 class="page-title">Tarefas e o scheduler</h1>
+        <p class="meta">Exemplo de página com bloco de código · ~20 min</p>
+      </header>
+
+      <article class="content">
+        <h2>Criando uma task</h2>
+        <p>
+          Cada task é uma função que tipicamente nunca retorna: ela entra em um loop e
+          cede o CPU com delays ou bloqueios em filas/semáforos.
+        </p>
+
+        <div class="pre-wrap">
+          <pre><code><span class="comment">/* Exemplo ilustrativo — ajuste ao seu port */</span>
+<span class="kw">void</span> vBlinkTask(<span class="kw">void</span> *pvParameters)
+{
+    (<span class="kw">void</span>)pvParameters;
+    <span class="kw">for</span> (;;)
+    {
+        gpio_toggle(LED_PIN);
+        vTaskDelay(pdMS_TO_TICKS(500));
+    }
+}
+
+<span class="kw">int</span> main(<span class="kw">void</span>)
+{
+    xTaskCreate(
+        vBlinkTask,
+        <span class="str">"blink"</span>,
+        configMINIMAL_STACK_SIZE,
+        NULL,
+        tskIDLE_PRIORITY + 1,
+        NULL
+    );
+    vTaskStartScheduler();
+    <span class="kw">for</span> (;;);
+}</code></pre>
+        </div>
+
+        <h3>Prioridade</h3>
+        <p>
+          Números maiores = maior prioridade. Tasks de mesma prioridade compartilham o
+          tempo conforme a configuração de time-slicing do port.
+        </p>
+
+        <h3>Próximos passos neste workshop</h3>
+        <ol>
+          <li>Medir stack usage com as tools do FreeRTOS.</li>
+          <li>Trocar <code>vTaskDelay</code> por espera em fila.</li>
+          <li>Introduzir uma ISR que envia eventos para a task.</li>
+        </ol>
+      </article>
+
+      <nav class="pager" aria-label="Navegação entre módulos">
+        <a href="01-introducao.html">
+          <span class="dir">Anterior</span>
+          ← O que é um RTOS
+        </a>
+        <a href="../exemplos/snippet-codigo.html">
+          <span class="dir">Próximo</span>
+          Exemplo de snippet →
+        </a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Comunidade de C e C++ Brasil</p>
+    </footer>
+  </div>
+</body>
+</html>

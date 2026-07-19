@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exemplos de componentes — Workshop FreeRTOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">FreeRTOS Workshop</span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="../index.html">Início</a>
+        <a href="../modulos/01-introducao.html">Módulos</a>
+        <a href="index.html" aria-current="page">Exemplos</a>
+        <a href="../guia/como-usar.html">Como usar</a>
+      </nav>
+    </header>
+
+    <main>
+      <header class="page-header">
+        <p class="eyebrow">Template</p>
+        <h1 class="page-title">Exemplos de componentes</h1>
+        <p class="meta">Copie os padrões HTML desta página ao criar material novo.</p>
+      </header>
+
+      <nav class="toc" aria-label="Nesta página">
+        <h2>Nesta página</h2>
+        <ol>
+          <li><a href="#callouts">Callouts</a></li>
+          <li><a href="#botoes">Botões</a></li>
+          <li><a href="#tabela">Tabela</a></li>
+          <li><a href="#codigo">Código</a></li>
+          <li><a href="snippet-codigo.html">Página só de snippet</a></li>
+        </ol>
+      </nav>
+
+      <article class="content">
+        <h2 id="callouts">Callouts</h2>
+        <div class="component-demo">
+          <p class="label">.callout</p>
+          <div class="callout">
+            <p class="callout-title">Dica</p>
+            <p>Use para objetivos, lembretes e contexto rápido.</p>
+          </div>
+          <div class="callout warn">
+            <p class="callout-title">Atenção</p>
+            <p>Use <code>.callout.warn</code> para avisos e pitfalls.</p>
+          </div>
+        </div>
+
+        <h2 id="botoes">Botões</h2>
+        <div class="component-demo">
+          <p class="label">.btn</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#">Primário</a>
+            <a class="btn btn-ghost" href="#">Secundário</a>
+          </div>
+        </div>
+
+        <h2 id="tabela">Tabela</h2>
+        <div class="component-demo">
+          <p class="label">table dentro de .table-wrap</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>API</th>
+                  <th>Uso</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>vTaskDelay</code></td>
+                  <td>Bloqueia a task por N ticks</td>
+                </tr>
+                <tr>
+                  <td><code>xQueueSend</code></td>
+                  <td>Envia item para uma fila</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h2 id="codigo">Bloco de código</h2>
+        <p>
+          Envolva <code>&lt;pre&gt;&lt;code&gt;</code> em <code>.pre-wrap</code>.
+          Spans opcionais: <code>.comment</code>, <code>.kw</code>, <code>.str</code>.
+        </p>
+        <div class="pre-wrap">
+          <pre><code><span class="kw">#include</span> <span class="str">"FreeRTOS.h"</span>
+<span class="kw">#include</span> <span class="str">"task.h"</span>
+
+<span class="comment">// ver snippet-codigo.html para uma página focada nisso</span></code></pre>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Comunidade de C e C++ Brasil</p>
+    </footer>
+  </div>
+</body>
+</html>
