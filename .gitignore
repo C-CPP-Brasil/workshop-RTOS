@@ -1,0 +1,15 @@
+# Ignore OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# Local preview / tooling
+.sass-cache/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+node_modules/
