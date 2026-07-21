@@ -27,21 +27,28 @@
     <main>
       <header class="page-header">
         <p class="eyebrow">Módulo 01</p>
-        <h1 class="page-title">O que é um RTOS</h1>
+        <h1 class="page-title">O que é um STR/RTOS</h1>
         <p class="meta">Exemplo de página de conteúdo · ~15 min</p>
       </header>
 
       <article class="content">
         <div class="callout">
           <p class="callout-title">Objetivo</p>
-          <p>Entender por que um sistema operacional de tempo real existe e o que o FreeRTOS oferece em um MCU.</p>
+          <p>Entender por que sistemas operacionais de tempo real (STR ou do 
+		  inglês Real Time Operating System, RTOS) existem e o que eles nos 
+		  possibilitam.</p>
         </div>
 
         <h2>Contexto</h2>
         <p>
-          Em firmware “bare metal”, o loop principal e as interrupções compartilham o processador
-          sem abstração de concorrência. Um <strong>RTOS</strong> adiciona tarefas, prioridade e
-          primitivas de sincronização para cumprir deadlines previsíveis.
+          Um STR é uma categoria de sistema operacional com foco em 
+		      previsibilidade que responde a eventos com tempo pré-determinado. Esse
+		      modelo é muito adequado para hardwares que devem executar tarefas 
+		      especificas pois sua previsibilidade é o que garante que determinados
+		      estimulos serão respondidos de acordo com a necessidade do programa, 
+		      por exemplo, um aparelho que acompanha os batimentos cardíacos de um 
+		      paciente num hospital deve alertar os médicos e enfermeiros 
+		      imediatamente quando houver uma anomalia.
         </p>
 
         <h2>Ideias-chave</h2>
@@ -79,7 +86,12 @@
 
         <div class="callout warn">
           <p class="callout-title">Atenção</p>
-          <p>Este texto é placeholder do template. Substitua pelo material real do workshop.</p>
+          <p>
+            Apesar de dizermos que um STR executa tarefas com tempo limitado, isso
+            não quer dizer que o programa deve ser curto, na verdade ele pode ter 
+            qualquer tamanho, inclusive o programa em si pode ser um loop infinito 
+            que só para ao dispositivo ser desligado.
+          </p>
         </div>
       </article>
 
