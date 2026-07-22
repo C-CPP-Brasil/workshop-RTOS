@@ -27,42 +27,29 @@
     <main>
       <header class="page-header">
         <p class="eyebrow">Módulo 01</p>
-        <h1 class="page-title">O que é um STR/RTOS</h1>
-        <p class="meta">Uma breve introdução ao conceito</p>
+        <h1 class="page-title">O que é FreeRTOS?</h1>
       </header>
 
       <article class="content">
         <div class="callout">
           <p class="callout-title">Objetivo</p>
           <p>
-            Entender por que sistemas operacionais de tempo real (STR ou do 
-		        inglês Real Time Operating System, RTOS) existem e o que eles nos 
-		        possibilitam.
+            Agora conheceremos o FreeRTOS, um sistema operacional RTOS muito 
+            usado no mercado de embarcados devido a sua leveza.
           </p>
-		  <p class="meta">Como na TI o uso do inglês é imperativo, iremos usar "RTOS" durante a apresentação do conteúdo.</p>
         </div>
 
         <h2>Contexto</h2>
         <p>
-          Um STR é uma categoria de sistema operacional com foco em 
-		      previsibilidade que executa tarefas com tempo pré-determinado. Esse
-		      modelo é muito adequado para hardwares que devem executar tarefas 
-		      especificas pois como seu foco é finalizar tarefas em um prazo 
-          estipulado, conta com escalonadores que tentam entregar mais tempo de 
-          CPU para tarefas com alta prioridade primeiro, e executam processos 
-          em baixa latência, podendo responder a "estimulos" mais rapidamente.
-          Por exemplo: um aparelho que acompanha os batimentos cardíacos de um 
-		      paciente num hospital deve alertar os médicos e enfermeiros 
-		      imediatamente quando houver uma anomalia; num RTOS essa anomalia ativa
-          um processo com prioridade alta que executa um beep prolongado para 
-          alertar os profissionais sobre uma possível emergência.
+          O FreeRTOS é o sistema operacional de tempo real mais usado no mercado
+          de embarcados, pois é leve, fácil de portar para diversas arquiteturas
+          e provê uma API baseada em POSIX, que facilita o desenvolvimento de 
+          software até mesmo para os desenvolvedores entrantes no mercado.
         </p>
 
         <h2>Ideias-chave</h2>
         <ul>
-          <li>Determinismo: Um RTOS deve ser previsível</li>
-          <li>Baixa latência: A resposta a um determinado evento importa mais que throughput médio.</li>
-          <li>O scheduler decide qual task roda com base em prioridade (e política).</li>
+          <li>TODO: Adicionar as ideias-chave do FreeRTOS</li>
         </ul>
 
         <div class="callout warn">
@@ -77,10 +64,13 @@
       </article>
 
       <nav class="pager" aria-label="Navegação entre módulos">
-        <span></span>
+        <a href="01-introducao.html">
+          <span class="dir">Anterior</span>
+          ← O que é um RTOS
+        </a>
         <a href="02-tarefas.html">
           <span class="dir">Próximo</span>
-          Tarefas e o scheduler →
+          Tarefas →
         </a>
       </nav>
     </main>
@@ -91,3 +81,4 @@
   </div>
 </body>
 </html>
+
