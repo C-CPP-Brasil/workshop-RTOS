@@ -1,26 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f2f5;
-            color: #1c1e21;
-        }
-        h1 {
-            font-size: 3rem;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workshop FreeRTOS — Comunidade C e C++ Brasil</title>
+  <meta name="description" content="Materiais para apresentação, estudo e desenvolvimento prático com FreeRTOS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">FreeRTOS Workshop</span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="modulos/01-introducao.html">Módulos</a>
+        <a href="exemplos/index.html">Exemplos</a>
+        <a href="guia/como-usar.html">Como usar</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Comunidade de C e C++ Brasil</p>
+        <h1>Entendendo RTOS na prática</h1>
+        <p class="lede">
+          Materiais para apresentação, estudo e desenvolvimento com FreeRTOS —
+          do conceito de tempo real até tarefas, filas e sincronização em sistemas embarcados.
+          O conteúdo foi feito para ser apresentado ao vivo, mas pode ser 
+          acompanhado de forma assíncrona pela web também. Sinta-se livre para
+          navegar pelos conteúdos, fazer exercícios e até mandar seu projeto para 
+          nossa comunidade e trocar ideia com outros membros sobre o seu projeto! :)
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="modulos/01-introducao.html">Começar pelos módulos</a>
+          <a class="btn btn-ghost" href="guia/como-usar.html">Como usar este template</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>O que você encontra aqui</h2>
+        <p class="section-intro">Estrutura base do site do workshop. O visual é um sample — troque as variáveis em <code>assets/css/main.css</code> quando for redesenhar.</p>
+        <ul class="feature-list">
+          <li>
+            <a href="modulos/01-introducao.html"><strong>Módulos</strong></a>
+            <span>Páginas de conteúdo com tipografia, listas e blocos de código.</span>
+          </li>
+          <li>
+            <a href="exemplos/index.html"><strong>Exemplos</strong></a>
+            <span>Componentes de UI e padrões Markdown/HTML prontos para copiar.</span>
+          </li>
+          <li>
+            <a href="guia/como-usar.html"><strong>Guia do template</strong></a>
+            <span>Como adicionar páginas, publicar no GitHub Pages e customizar o design.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Agenda rápida</h2>
+        <ol class="agenda">
+          <li><a href="modulos/01-introducao.html">O que é um STR/RTOS?</a></li>
+          <li><a href="modulos/02-freertos.html">O que é o FreeRTOS?</a></li>
+          <li><a href="modulos/02-tarefas.html">Tarefas e o scheduler</a></li>
+          <li><a href="exemplos/snippet-codigo.html">Exemplo: criar uma task</a></li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Comunidade de C e C++ Brasil · <a href="https://github.com/">workshop-RTOS</a></p>
+      <p class="footer-note">Design sample — substitua cores e tipografia em <code>--tokens</code> no CSS.</p>
+    </footer>
+  </div>
 </body>
 </html>
